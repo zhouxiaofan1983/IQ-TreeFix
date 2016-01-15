@@ -1,0 +1,14 @@
+The main differences between IQ-TreeFix and the original TreeFix is the added support for IQ-TREE. By default, IQ-TreeFix uses IQ-TREE for per-site likelihood calculation and statistical test ("iqtreemodel.CoarseModel"). The users can use the "-m" option to switch between iqtreemodel and the original raxmlmodel.
+
+iqtreemodel includes the following extra arguments to IQ-TREE (via the "-e" option):
+1) -c	- number of threads to use (default: "1")
+2) -t	- data type, one of the following: DNA, AA, NT2AA, CODON (default: "DNA")
+3) -m	- model of DNA, AA, or CODON substitution (default: "GTR+G"; refer to IQ-TREE manual for a complete list of models for each data type)
+4) -r	- number of RELL replicates for the tree topology test (default: "10000")
+5) -p	- the prefix for temporary output files (default: "")
+
+Example:
+1) to run IQ-TreeFix on a protein data set with iqtreemodel, "LG" plus "GAMMA" model and 4 threads:
+treefix -s ref.stree -S ref.smap gene.tree -m treefix.models.iqtreemodel.CoarseModel -e "-c 4 -t AA -m LG+G -p gene" -V 1 -l gene.log
+2) to run a similar analysis using the original raxmlmodel:
+treefix -s ref.stree -S ref.smap gene.tree -m treefix.models.raxmlmodel.RAxMLModel -e "-m PROTGAMMALG" -V 1 -l gene.log
