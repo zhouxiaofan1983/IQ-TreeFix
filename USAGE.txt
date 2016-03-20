@@ -2,10 +2,11 @@ The main differences between IQ-TreeFix and the original TreeFix is the added su
 
 iqtreemodel includes the following extra arguments to IQ-TREE (via the "-e" option):
 1) -c	- number of threads to use (default: "1")
-2) -t	- data type, one of the following: DNA, AA, NT2AA, CODON (default: "DNA")
-3) -m	- model of DNA, AA, or CODON substitution (default: "GTR+G"; refer to IQ-TREE manual for a complete list of models for each data type)
+2) -m	- model of DNA, AA, or CODON substitution (default: "GTR+G"; refer to IQ-TREE manual for a complete list of models for each data type)
+3) -p	- the prefix for temporary output files (default: "")
 4) -r	- number of RELL replicates for the tree topology test (default: "10000")
-5) -p	- the prefix for temporary output files (default: "")
+5) -t	- data type, one of the following: DNA, AA, NT2AA, CODON (default: "DNA")
+6) -z   - topology test, one of the following: SH, AU (default: "SH")
 
 Example:
 1) to run IQ-TreeFix on a protein data set with iqtreemodel, "LG" plus "GAMMA" model and 4 threads:

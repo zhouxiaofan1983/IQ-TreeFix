@@ -1,4 +1,10 @@
-IQ-TreeFix Change Log (2015/09/22)
+IQ-TreeFix Change Log
+
+iqtreefix-1.2.1 (2016/03/18)
+-----------------------
+-- add support for AU-test using IQTREE (version 1.4.0 or later)
+
+iqtreefix-1.2.0 (2015/09/22)
 -----------------------
 -- add IQTREE support for per-site likelihood calculation and statistical tests
 -- add eight additional evolutionary models to raxmlmodel: "LG", "MTART", "MTZOA", "PMB", "HIVB", "HIVW", "JTTDCMUT", "FLU"
